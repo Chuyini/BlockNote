@@ -20,6 +20,7 @@ namespace BlocDeNotas
         {
             InitializeComponent();
             
+
         }
 
         private void GuardarArchivo_Load(object sender, EventArgs e)
@@ -50,6 +51,10 @@ namespace BlocDeNotas
                 this.Hide();
                 MessageBox.Show("Se ah guardado");
             }
+            else
+            {
+                this.Hide();
+            }
             
         }
         public void setPrincipal(Form1 padre)
@@ -61,19 +66,21 @@ namespace BlocDeNotas
            
             TextReader listaArchivos=new StreamReader("listaArchivos.txt");
             
+            
             List<string> lista = new List<string>();
             while(listaArchivos.ReadLine()!=null)
-            {
-                
-                 lista.Add(listaArchivos.ReadLine());
-                MessageBox.Show(listaArchivos.ReadLine());
-                
-                
- 
+            {   
+                if(listaArchivos.ReadLine() != null)
+                {
+                    lista.Add(listaArchivos.ReadLine());
+
+                }
+                 
+
             }
             listaArchivos.Close();
 
-            if(lista.Contains(textBox1.Text))
+            if(lista.IndexOf(textBox1.Text)!=-1)
             {
                 Form3 ventana4=new Form3();
                 ventana4.setPadre(principal);
@@ -83,12 +90,7 @@ namespace BlocDeNotas
             }
             else
             {
-                TextWriter listaArchivosEscritura = new StreamWriter("listaArchivos.txt");
-                foreach(var item in lista)
-                {
-                    listaArchivosEscritura.WriteLine(item);
-                    MessageBox.Show(item);
-                }
+                TextWriter listaArchivosEscritura=File.AppendText("listaArchivos.txt");
                 listaArchivosEscritura.WriteLine(textBox1.Text);
                 listaArchivosEscritura.Close();
 
@@ -99,7 +101,7 @@ namespace BlocDeNotas
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            textBox1.Focus();
         }
     }
 }

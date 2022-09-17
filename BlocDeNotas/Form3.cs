@@ -28,6 +28,7 @@ namespace BlocDeNotas
         private void button1_Click(object sender, EventArgs e)
         {
             quiere= true;
+            this.Hide();
         }
         public void setPadre( Form1 padre)
         {
@@ -37,6 +38,7 @@ namespace BlocDeNotas
         private void button2_Click(object sender, EventArgs e)
         {
             quiere = false;
+            this.Hide();
         }
     }
 }
