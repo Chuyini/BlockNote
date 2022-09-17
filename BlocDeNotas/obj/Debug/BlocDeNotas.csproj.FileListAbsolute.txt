@@ -1,0 +1,14 @@
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.exe.config
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.exe
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\bin\Debug\BlocDeNotas.pdb
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.csproj.AssemblyReference.cache
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.csproj.SuggestedBindingRedirects.cache
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.Form1.resources
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.Properties.Resources.resources
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.csproj.GenerateResource.cache
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.csproj.CoreCompileInputs.cache
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.exe
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.pdb
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.GuardarArchivo.resources
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.Form2.resources
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.Form3.resources
