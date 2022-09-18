@@ -12,3 +12,5 @@ C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.pdb
 C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.GuardarArchivo.resources
 C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.Form2.resources
 C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.Form3.resources
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.Form4.resources
+C:\Users\MIRI\source\repos\BlocDeNotas\BlocDeNotas\obj\Debug\BlocDeNotas.Form5.resources

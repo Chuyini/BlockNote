@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace BlocDeNotas
 {
@@ -42,14 +43,14 @@ namespace BlocDeNotas
                 TextWriter archivo = new StreamWriter(textBox1.Text + ".txt");
 
                 principal.nombreArchivo = textBox1.Text;
+                principal.toolStripStatusLabel2.Text = principal.nombreArchivo;
                 archivo.WriteLine(principal.contenido);
                 archivo.Close();
-
                 principal.archivo = archivo;
-
-
                 this.Hide();
-                MessageBox.Show("Se ah guardado");
+                principal.toolStripStatusLabel1.Text = "Archivo guardado...";
+               
+                
             }
             else
             {
@@ -64,44 +65,43 @@ namespace BlocDeNotas
         public bool verificar()
         {
            
-            TextReader listaArchivos=new StreamReader("listaArchivos.txt");
+            StreamReader listaArchivos=new StreamReader("listaArchivos.txt");
             
-            
-            List<string> lista = new List<string>();
             while(listaArchivos.ReadLine()!=null)
-            {   
-                if(listaArchivos.ReadLine() != null)
-                {
-                    lista.Add(listaArchivos.ReadLine());
+            {
 
+                if (listaArchivos.ReadLine()==textBox1.Text)
+                {
+                    Form3 ventana4 = new Form3();
+                    ventana4.setPadre(principal);
+                    ventana4.Show();
+                    listaArchivos.Close();
+
+                    return ventana4.quiere;
                 }
-                 
+               
 
             }
             listaArchivos.Close();
+            TextWriter listaArchivosEscritura = File.AppendText("listaArchivos.txt");
+            listaArchivosEscritura.WriteLine(textBox1.Text);
+            listaArchivosEscritura.Close();
 
-            if(lista.IndexOf(textBox1.Text)!=-1)
-            {
-                Form3 ventana4=new Form3();
-                ventana4.setPadre(principal);
-                ventana4.Show();
-
-                return ventana4.quiere;
-            }
-            else
-            {
-                TextWriter listaArchivosEscritura=File.AppendText("listaArchivos.txt");
-                listaArchivosEscritura.WriteLine(textBox1.Text);
-                listaArchivosEscritura.Close();
+            return true;    
 
 
-            }
-            return true;
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             textBox1.Focus();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
